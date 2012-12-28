@@ -52,7 +52,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
    <th>Alias</th><th>Method</th><th>Description</th>
   </tr>
 	<tr>
-		<td> server</td><td>function</td><td>host python SimpleHTTPServer in current directory. Port mifgh be given as parm (port)</td>
+		<td> server</td><td>function</td><td>host python SimpleHTTPServer in current directory. Port might be given as parm (port)</td>
 	 </tr><tr>
 		<td> ip</td><td>dig +short myip.opendns.com @resolver1.opendns.com</td><td>return ip </td>
 	 </tr><tr>
@@ -110,6 +110,6 @@ brew install wget
 
 ##Installation
 Open terminal and type
-bash
+```bash
 git clone https://github.com/piotrgiedziun/dotfiles.git && cd dotfiles && ./install.sh
-
+```
