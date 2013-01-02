@@ -21,7 +21,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> p</td><td>cd ~/Projects</td><td> </td>
 	 </tr><tr>
-		<td> pl</td><td>cd ~/Projects/[project]</td><td>List project list and cd to chosen one</td>
+		<td> pl</td><td>cd ~/Projects/[project]</td><td>List projects and cd to chosen one</td>
 	 </tr>
 </table>
 ###Opening files
