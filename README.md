@@ -17,7 +17,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> home</td><td>cd ~</td><td> </td>
 	 </tr><tr>
-		<td> d</td><td>cd ~/Dropbox</td><td> </td>
+		<td> d</td><td>cd ~/Downloads</td><td> </td>
 	 </tr><tr>
 		<td> p</td><td>cd ~/Projects</td><td> </td>
 	 </tr><tr>

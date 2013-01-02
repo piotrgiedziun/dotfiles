@@ -5,7 +5,7 @@ alias ~="cd ~"
 alias home="cd ~"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
+alias d="cd ~/Downloads"
 alias p="cd ~/Projects"
 alias o="open"
 alias o.="open ."
