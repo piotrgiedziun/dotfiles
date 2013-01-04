@@ -1,0 +1,10 @@
+[user]
+	name = Piotr Giedziun
+	email = piotrgiedziun@gmail.com
+
+[color]
+	ui = auto
+
+[alias]
+	br = branch
+	st = status
