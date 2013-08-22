@@ -117,5 +117,5 @@ brew install wget
 ##Installation
 Open terminal and type
 ```bash
-git clone https://github.com/piotrgiedziun/dotfiles.git && cd dotfiles && ./install.py
+git clone https://github.com/piotrgiedziun/dotfiles.git && cd dotfiles && ./install
 ```
