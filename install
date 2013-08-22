@@ -1,0 +1,50 @@
+#!/usr/bin/python
+import os
+
+files = [".extra",".bash_profile",".bash_prompt",".exports",".aliases",".functions",]
+
+print "!! Next action will replace following files !!"
+for file in files:
+	print "> ~/.%s" % (file, )
+
+a = raw_input('\nDo you want to replace dotfiles? (y/n)\n')
+
+if a.lower() == "y":
+	for file in files:
+		os.system("cp %s ~/%s" % (file, file))
+
+# copy bin files
+bin_files = ["server",]
+
+os.system("mkdir ~/.bin")
+for file in bin_files:
+	os.system("cp .bin/%s ~/.bin/%s" % (file, file))
+
+a = raw_input('\nDo you want to create gitconfig file? (y/n)\n')
+
+if a.lower() == "y":
+	email = raw_input('Enter your email address:\n')
+	full_name = raw_input('Enter your full name:\n')
+
+	schema_file = open(".gitconfig.schema", "r").read()
+	schema_file = schema_file.replace("%EMAIL%", email)
+	schema_file = schema_file.replace("%FULL_NAME%", full_name)
+	with open("~/.gitconfig", "r+") as f:
+		f.seek(0)
+		f.truncate()
+		f.write(schema_file)
+		f.close()
+	os.system("cp %s ~/%s" % (file, file))
+
+a = raw_input('\nDo you want to create ~/Projects and ~/Work dirs? (y/n)\n')
+
+if a.lower() == "y":
+	os.system("mkdir ~/Work")
+	os.system("mkdir ~/Projects")
+
+a = raw_input("\nDo you want to download iterm2 Solarized Dark style? (y/n)\n")
+
+if a.lower() == "y":
+	os.system("wget 'https://raw.github.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors'")
+	os.system("open 'Solarized Dark.itermcolors'")
+	print "open iterm and set downloaded color sheme"

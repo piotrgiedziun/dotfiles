@@ -8,17 +8,8 @@ function copy() {
  $@ | pbcopy
 }
 
-function pl() {
-    p
-    if [[ -n "$@" ]]; then
-        ./list.py $@
-        cd `python -c $'import os,sys;\na = raw_input("");\ndirs=[];\nfilter = None\nif len(sys.argv) > 1:\n\tfilter = sys.argv[1]\n
-\nfor dir in [o for o in os.listdir(".") if os.path.isdir(o)]:\n\tif filter == None or filter in dir:\n\t\tdirs.append(dir)\nif a.isdigit():\n\tprint dirs[int(a)-1];' $@` 
-    else
-        ./list.py
-        cd `python -c $'import os,sys;\na = raw_input("");\ndirs=[];\nfilter = None\nif len(sys.argv) > 1:\n\tfilter = sys.argv[1]\n
-\nfor dir in [o for o in os.listdir(".") if os.path.isdir(o)]:\n\tif filter == None or filter in dir:\n\t\tdirs.append(dir)\nif a.isdigit():\n\tprint dirs[int(a)-1];'` 
-    fi
+function cdf() { # short for `cdfinder`
+    cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
 }
 
 # Determine size of a file or total size of a directory
@@ -48,9 +39,7 @@ function dataurl() {
 function server() {
     local port="${1:-8000}"
     sleep 1 && open "http://localhost:${port}/" &
-    # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
-    # And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
-    python -c $'import SimpleHTTPServer, SocketServer, sys;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nclass NoCacheHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):\n\tdef do_GET(self, *args, **kwargs):\n\t\tself.headers["cache-control"] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0";\n\t\tself.headers["pragma"] = "no-cache";\n\t\treturn SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self, *args, **kwargs);\nhttpd = SocketServer.TCPServer(("0.0.0.0", int(sys.argv[1])), NoCacheHandler);\nhttpd.serve_forever();' "$port"
+    python ~/bin/server "$port"
 }
 
 # Syntax-highlight JSON strings or files

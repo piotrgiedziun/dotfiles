@@ -8,20 +8,23 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 <table width="100%">
   <tr>
     <th>Alias</th><th>Method</th><th>Description</th>
-  </tr><tr>
-		<td> ..</td><td>cd ..</td><td> </td>
+  </tr>
+  	<tr>
+		<td> cdf</td><td>(fuction)</td><td> cd to path indicated by Finder.app instance</td>
 	 </tr><tr>
-		<td> ...</td><td>cd ../..</td><td> </td>
+		<td> ..</td><td>cd ..</td><td> cd up</td>
 	 </tr><tr>
-		<td> ~</td><td>cd ~</td><td> </td>
+		<td> ...</td><td>cd ../..</td><td> cd 2 x up</td>
 	 </tr><tr>
-		<td> home</td><td>cd ~</td><td> </td>
+		<td> ~</td><td>cd ~</td><td> cd to home directory</td>
 	 </tr><tr>
-		<td> d</td><td>cd ~/Downloads</td><td> </td>
+		<td> -</td><td>cd -</td><td> cd to previously visted folder</td>
 	 </tr><tr>
-		<td> p</td><td>cd ~/Projects</td><td> </td>
+		<td> cdd</td><td>cd ~/Downloads</td><td> </td>
 	 </tr><tr>
-		<td> pl</td><td>cd ~/Projects/[project]</td><td>List projects and cd to chosen one</td>
+		<td> cdp</td><td>cd ~/Projects</td><td> </td>
+	 </tr><tr>
+		<td> cdw</td><td>cd ~/Work</td><td> </td>
 	 </tr>
 </table>
 ###Opening files
@@ -41,9 +44,9 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
     <th>Alias</th><th>Method</th><th>Description</th>
   </tr>
 	 <tr>
-		<td> lsl</td><td>ls -l</td><td> </td>
+		<td> ll</td><td>ls -l</td><td> </td>
 	 </tr><tr>
-		<td> lsa</td><td>ls -la</td><td> </td>
+		<td> la</td><td>ls -la</td><td> </td>
 	 </tr><tr>
 		<td> lsd</td><td>ls -l | grep "^d"</td><td> </td>
 	 </tr>
@@ -71,7 +74,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 <tr>
 		<td> json</td><td>function</td><td>Syntax-highlight JSON strings or files</td>
 	 </tr><tr>
-		<td> GET|POST |PUT|DELETE [url]</td><td>lwp-request -m '[METHOD]'</td><td> send GET/POST/PUT/DELETE request</td>
+		<td> GET|POST|PUT|DELETE [url]</td><td>lwp-request -m '[METHOD]'</td><td> send GET/POST/PUT/DELETE request</td>
 	 </tr>
 </table>
 ###Others
@@ -102,7 +105,8 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 </table>
 
 ##Directory structure
-* **~/Projects** - project main dir
+* **~/Projects** - own projects main dir
+* **~/Work** - work projects main dir
 
 ##Prerequisites
 * **brew** - The missing package manager for OS X [[download]](http://mxcl.github.com/homebrew/)<br>

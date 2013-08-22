@@ -1,6 +1,6 @@
 [user]
-	name = Piotr Giedziun
-	email = piotrgiedziun@gmail.com
+	name = %FULL_NAME%
+	email = %EMAIL%
 
 [color]
 	ui = auto
