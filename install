@@ -29,7 +29,7 @@ if a.lower() == "y":
 	schema_file = open(".gitconfig.schema", "r").read()
 	schema_file = schema_file.replace("%EMAIL%", email)
 	schema_file = schema_file.replace("%FULL_NAME%", full_name)
-	with open("~/.gitconfig", "r+") as f:
+	with open("~/.gitconfig", "w") as f:
 		f.seek(0)
 		f.truncate()
 		f.write(schema_file)
