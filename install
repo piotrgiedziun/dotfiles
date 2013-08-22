@@ -11,14 +11,14 @@ a = raw_input('\nDo you want to replace dotfiles? (y/n)\n')
 
 if a.lower() == "y":
 	for file in files:
-		os.system("cp %s ~/%s" % (file, file))
+		os.system("cp %s ~/" % (file, ))
 
-# copy bin files
-bin_files = ["server",]
+	# copy bin files
+	bin_files = ["server",]
 
-os.system("mkdir ~/.bin")
-for file in bin_files:
-	os.system("cp .bin/%s ~/.bin/%s" % (file, file))
+	os.system("mkdir ~/.bin 2> /dev/null")
+	for file in bin_files:
+		os.system("cp .bin/%s ~/.bin" % (file,))
 
 a = raw_input('\nDo you want to create gitconfig file? (y/n)\n')
 
@@ -29,18 +29,15 @@ if a.lower() == "y":
 	schema_file = open(".gitconfig.schema", "r").read()
 	schema_file = schema_file.replace("%EMAIL%", email)
 	schema_file = schema_file.replace("%FULL_NAME%", full_name)
-	with open("~/.gitconfig", "w") as f:
-		f.seek(0)
-		f.truncate()
+	with open(os.path.expanduser("~/.gitconfig"), "w") as f:
 		f.write(schema_file)
 		f.close()
-	os.system("cp %s ~/%s" % (file, file))
 
 a = raw_input('\nDo you want to create ~/Projects and ~/Work dirs? (y/n)\n')
 
 if a.lower() == "y":
-	os.system("mkdir ~/Work")
-	os.system("mkdir ~/Projects")
+	os.system("mkdir ~/Work 2> /dev/null")
+	os.system("mkdir ~/Projects 2> /dev/null")
 
 a = raw_input("\nDo you want to download iterm2 Solarized Dark style? (y/n)\n")
 
