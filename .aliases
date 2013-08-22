@@ -3,7 +3,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~"
 # last dir
-alias -="cd -"
+alias -- -="cd -"
 
 # Shortcuts
 alias cdd="cd ~/Downloads"
@@ -32,7 +32,7 @@ alias la="ls -la ${colorflag}"
 alias lsd='ls -l ${colorflag} | grep "^d"'
 
 # Always use color output for `ls`
-alias ls="command ls ${colorflag}"ip
+alias ls="command ls ${colorflag}"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
