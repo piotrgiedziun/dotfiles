@@ -110,11 +110,17 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 * **~/Projects** - own projects main dir
 * **~/Work** - work projects main dir
 
+##Virtualenv
+* virtualenv directory `~/.virtualenvs`
+* create new virtual env - `mkvirtualenv [env_name]`
+* remove existing one - `rmvirtualenv [env_name]`
+* workon existing one - `workon [env_name]`
+
 ##Prerequisites
 * **brew** - The missing package manager for OS X [[download]](http://mxcl.github.com/homebrew/)<br>
-ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+`ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"`
 * **wget** - The non−interactive network downloader<br>
-brew install wget
+`brew install wget`
 
 ##Installation
 Open terminal and type
