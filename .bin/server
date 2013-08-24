@@ -1,11 +1,8 @@
 #!/usr/bin/python
-import SimpleHTTPServer, SocketServer, sys
-
-map = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map
-map[""] = "text/plain"
-
-for key, value in map.items():
-	map[key] = value + "charset=UTF-8"
+import SimpleHTTPServer
+import SocketServer
+import sys
+import threading
 
 class NoCacheHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 	def do_GET(self, *args, **kwargs):
@@ -14,4 +11,11 @@ class NoCacheHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 		return SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self, *args, **kwargs)
 
 httpd = SocketServer.TCPServer(("", int(sys.argv[1])), NoCacheHandler)
-httpd.serve_forever()
+httpdThread = threading.Thread(target=httpd.serve_forever)
+httpdThread.daemon = True
+httpdThread.start()
+
+raw_input('Press enter to stop servers.\n')
+httpd.shutdown()
+httpd.socket.close()
+httpdThread.join()
