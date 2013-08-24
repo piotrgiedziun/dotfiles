@@ -39,7 +39,7 @@ function dataurl() {
 function server() {
     local port="${1:-8000}"
     sleep 1 && open "http://localhost:${port}/" &
-    python ~/bin/server "$port"
+    python ~/.bin/server "$port"
 }
 
 # Syntax-highlight JSON strings or files
