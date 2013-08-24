@@ -80,27 +80,29 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 ###Others
 <table width="100%">
   <tr>
-    <th>Alias</th><th>Method</th><th>Description</th>
+    <th>Alias</th><th>Description</th><th>Usage</th>
   </tr><tr>
-		<td> mkd</td><td>function</td><td>make dir and cd to it</td>
+		<td> mkd</td><td>make dir and cd to it</td><td>mkd iLikePizza</td>
 	 </tr><tr>
 <tr>
-		<td> copy</td><td>function</td><td>copy content to clipboard (copy cat file.txt)</td>
+		<td> copy</td><td>copy given content to clipboard </td><td>copy cat ~/.ssh/id_rsa.pub</td>
 	 </tr><tr>
-		<td> dataurl</td><td>function</td><td>return base64 of given object</td>
+		<td> dataurl</td><td>dataurl image.png</td><td>return base64 of given object</td>
 	 </tr>
 	  <tr>
-		<td> update</td><td>sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g; sudo gem update</td><td>global update </td>
+		<td> update</td><td>update</td><td>update gem, brew, system etc.</td>
 	 </tr><tr>
-		<td> lscleanup</td><td>/System/Library/ Frameworks/CoreServices.framework/Frameworks/ LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder</td><td> </td>
+		<td> lscleanup</td><td>lscleanup</td><td> clean up given dir</td>
 	 </tr><tr>
-		<td> cleanup</td><td>find . -type f -name '*.DS_Store' -ls -delete</td><td>clean up dir </td>
+		<td> cleanup</td><td>cleanup</td><td>clean up current dir</td>
 	 </tr><tr>
-		<td> emptytrash</td><td>sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl</td><td> </td>
+		<td> emptytrash</td><td>emptytrash</td><td> clean trash</td>
 	 </tr><tr>
-		<td> urlencode</td><td>python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"</td><td> </td>
+		<td> urlencode</td><td>urlencode http://google.com</td><td> encode given url</td>
 	 </tr><tr>
-		<td> mergepdf</td><td>/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py</td><td> merge PDF files</td>
+		<td> mergepdf</td><td>mergepdf --output out.pdf file1.pdf file2.pdf</td><td> merge PDF files</td>
+	 </tr><tr>
+		<td> bell</td><td>sleep 2 && bell</td><td> notify task is done</td>
 	 </tr>
 </table>
 
