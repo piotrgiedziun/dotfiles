@@ -105,8 +105,8 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 		<td> bell</td><td>sleep 2 && bell</td><td> notify task is done</td>
 	 </tr><tr>
 		<td> extract</td><td>extract file.zip</td><td> extract given file</td>
-	 </tr>tr>
-		<td> roll</td><td>roll file.zip file.png file.jpg</td><td> craete zip/tar/tar.gz archive from listed files</td>
+	 </tr><tr>
+		<td> roll</td><td>roll file.zip file.png file.jpg</td><td> create zip/tar/tar.gz archive from listed files</td>
 	 </tr>
 </table>
 
