@@ -3,6 +3,52 @@ function mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
+# extract given file
+# source: https://github.com/ddjfreedom/dotfiles/
+function extract () {
+  if [ $# -lt 1 ]
+  then
+    echo 'Usage: extract [file]'
+    return 1
+  fi
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2) tar xjvf $1 ;;
+      *.tar.gz)  tar xvzf $1 ;;
+      *.tar)     tar xvf $1  ;;
+      *.bz2)     bunzip2 $1  ;;
+      *.gz)      gunzip $1   ;;
+      *.tbz2|*.tbz)    tar xvjf $1 ;;
+      *.tgz)     tar xvzf $1 ;;
+      *.rar)     unrar x $1  ;;
+      *.zip)     unzip $1    ;;
+      *.7z)      7z x $1     ;;
+      *)         echo "don't know how to extract '$1'..." ;;
+    esac
+  else
+    echo "'$1' is not a valid file!"
+  fi
+}
+
+# roll given files
+# source: https://github.com/ddjfreedom/dotfiles/
+function roll () {
+  if [ "$#" -ne 0 ] ; then
+    FILE="$1"
+    case "$FILE" in
+      *.tar.bz2|*.tbz2) shift && tar cvjf "$FILE" $* ;;
+      *.tar.gz|*.tgz)   shift && tar cvzf "$FILE" $* ;;
+      *.tar)            shift && tar cvf "$FILE" $* ;;
+      *.zip)            shift && zip "$FILE" $* ;;
+      *.7z)             shift && 7zr a "$FILE" $* ;;
+      *)                echo "'$1' cannot be rolled via roll()" ;;
+    esac
+  else
+    echo 'usage: roll [file] [contents]'
+    return 1
+  fi
+}
+
 # copy  to clipboard
 function copy() {
  $@ | pbcopy
