@@ -102,7 +102,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> mergepdf</td><td>mergepdf --output out.pdf file1.pdf file2.pdf</td><td> merge PDF files</td>
 	 </tr><tr>
-		<td> bell</td><td>sleep 2 && bell</td><td> notify task is done</td>
+		<td> beep</td><td>sleep 2 && beep</td><td> notify task is done</td>
 	 </tr><tr>
 		<td> extract</td><td>extract file.zip</td><td> extract given file</td>
 	 </tr><tr>
