@@ -125,6 +125,8 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 `ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"`
 * **wget** - The non−interactive network downloader<br>
 `brew install wget`
+* **iTerm2** - 
+http://www.iterm2.com/downloads/beta/iTerm2-1_0_0_20130811.zip 
 
 ##Installation
 Open terminal and type
