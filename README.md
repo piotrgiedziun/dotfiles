@@ -102,7 +102,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> mergepdf</td><td>mergepdf --output out.pdf file1.pdf file2.pdf</td><td> merge PDF files</td>
 	 </tr><tr>
-		<td> bell</td><td>sleep 2 && bell</td><td> notify task is done</td>
+		<td> beep</td><td>sleep 2 && beep</td><td> notify task is done</td>
 	 </tr><tr>
 		<td> extract</td><td>extract file.zip</td><td> extract given file</td>
 	 </tr><tr>
@@ -125,6 +125,8 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 `ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"`
 * **wget** - The non−interactive network downloader<br>
 `brew install wget`
+* **iTerm2** - 
+http://www.iterm2.com/downloads/beta/iTerm2-1_0_0_20130811.zip 
 
 ##Installation
 Open terminal and type

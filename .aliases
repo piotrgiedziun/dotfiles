@@ -12,8 +12,8 @@ alias cdw="cd ~/Work"
 alias o="open"
 alias o.="open ."
 
-# signal bell
-alias bell="tput bel"
+# signal beep
+alias beep="tput bel"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
