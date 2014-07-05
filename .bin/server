@@ -20,8 +20,8 @@ if __name__ == "__main__":
 	httpdThread = threading.Thread(target=httpd.serve_forever)
 	httpdThread.daemon = True
 	httpdThread.start()
-	print "Server started 0.0.0.0:%d" % (port,)
-	
+	print "Server started http://0.0.0.0:%s" % (port,)
+
 	raw_input('Press enter to stop servers.\n')
 	httpd.shutdown()
 	httpd.socket.close()
