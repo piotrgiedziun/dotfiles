@@ -4,18 +4,25 @@ import SocketServer
 import sys
 import threading
 
+
 class NoCacheHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
 	def do_GET(self, *args, **kwargs):
 		self.headers["cache-control"] = "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 		self.headers["pragma"] = "no-cache"
 		return SimpleHTTPServer.SimpleHTTPRequestHandler.do_GET(self, *args, **kwargs)
 
-httpd = SocketServer.TCPServer(("", int(sys.argv[1])), NoCacheHandler)
-httpdThread = threading.Thread(target=httpd.serve_forever)
-httpdThread.daemon = True
-httpdThread.start()
 
-raw_input('Press enter to stop servers.\n')
-httpd.shutdown()
-httpd.socket.close()
-httpdThread.join()
+if __name__ == "__main__":
+	# user input
+	port = sys.argv[1]
+
+	httpd = SocketServer.TCPServer(("", int(port)), NoCacheHandler)
+	httpdThread = threading.Thread(target=httpd.serve_forever)
+	httpdThread.daemon = True
+	httpdThread.start()
+	print "Server started 0.0.0.0:%d" % (port,)
+	
+	raw_input('Press enter to stop servers.\n')
+	httpd.shutdown()
+	httpd.socket.close()
+	httpdThread.join()
