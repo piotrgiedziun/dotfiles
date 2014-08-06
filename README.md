@@ -131,5 +131,5 @@ http://www.iterm2.com/downloads/beta/iTerm2-1_0_0_20130811.zip
 ##Installation
 Open terminal and type
 ```bash
-git clone https://github.com/piotrgiedziun/dotfiles.git && cd dotfiles && ./install
+git clone https://github.com/piotrgiedziun/dotfiles.git && cd dotfiles && sudo ./install
 ```
