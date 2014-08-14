@@ -132,4 +132,7 @@ http://www.iterm2.com/downloads/beta/iTerm2-1_0_0_20130811.zip
 Open terminal and type
 ```bash
 git clone https://github.com/piotrgiedziun/dotfiles.git && cd dotfiles && sudo ./install
+
+# if you want to have sublime attached
+ln -sf /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
