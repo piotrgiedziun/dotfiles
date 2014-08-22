@@ -22,7 +22,7 @@ if __name__ == "__main__":
 	httpdThread.start()
 	print "Server started http://0.0.0.0:%s" % (port,)
 
-	raw_input('Press enter to stop servers.\n')
+	raw_input('tput boldPress enter to stop server.tput sgr0\n')
 	httpd.shutdown()
 	httpd.socket.close()
 	httpdThread.join()

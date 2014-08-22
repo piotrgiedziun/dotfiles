@@ -1,11 +1,11 @@
 #!/usr/bin/python
 import os
 
-files = [".extra",".bash_profile",".bash_prompt",".exports",".aliases",".functions",".bashrc"]
+files = [".extra",".bash_profile",".bash_prompt",".exports",".aliases",".functions",".bashrc","vimrc"]
 
 print "!! Next action will replace following files !!"
 for file in files:
-	print "> ~/.%s" % (file, )
+	print "> ~/%s" % (file, )
 
 a = raw_input('\nDo you want to replace dotfiles? (y/n)\n')
 

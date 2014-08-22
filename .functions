@@ -85,7 +85,7 @@ function dataurl() {
 # kill if another instance exists
 function server() {
     local port="${1:-8000}"
-    kill -9 $(lsof -i:$port -t) 2> /dev/null
+    killp $port ""
     python ~/.bin/server "$port"
 }
 
@@ -101,6 +101,7 @@ function json() {
 
 function killp() {
   local port="${1:-8000}"
+  local notFoundMessage="${2:-Nothing found.}"
   if [ ! -z $(lsof -i:$port -t) ]; then
     ps ww -p $(lsof -i:$port -t)
     echo "Do you want to kill listed processes? (y/n):"
@@ -109,7 +110,7 @@ function killp() {
       kill -9 $(lsof -i:$port -t) 2> /dev/null
     fi
   else
-    echo "Nothing found."
+    echo $notFoundMessage
   fi
 }
 
