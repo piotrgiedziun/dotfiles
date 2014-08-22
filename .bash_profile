@@ -31,6 +31,13 @@ export LANG="en_US"
 if [ -f /usr/local/etc/bash_completion ]; then
   . /usr/local/etc/bash_completion
 fi
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+#MAGIC PIP FIX
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
 
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
