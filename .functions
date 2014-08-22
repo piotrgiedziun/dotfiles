@@ -99,6 +99,20 @@ function json() {
     fi
 }
 
+function killp() {
+  local port="${1:-8000}"
+  if [ ! -z $(lsof -i:$port -t) ]; then
+    ps ww -p $(lsof -i:$port -t)
+    echo "Do you want to kill listed processes? (y/n):"
+    read choice
+    if [ "$choice" ==  "y" ] ; then
+      kill -9 $(lsof -i:$port -t) 2> /dev/null
+    fi
+  else
+    echo "Nothing found."
+  fi
+}
+
 # All the dig info
 function digga() {
     dig +nocmd "$1" any +multiline +noall +answer

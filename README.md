@@ -81,10 +81,14 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 <table width="100%">
   <tr>
     <th>Alias</th><th>Usage</th><th>Description</th>
-  </tr><tr>
+  </tr>
+	<tr>
+		<td> killp</td><td>killp 8080</td><td>kill all processes working on port 8080</td>
+	</tr>
+	<tr>
 		<td> mkd</td><td>mkd iLikePizza</td><td>make dir and cd to it</td>
-	 </tr><tr>
-<tr>
+	</tr>
+	<tr>
 		<td> copy</td><td>copy cat ~/.ssh/id_rsa.pub</td><td>copy given content to clipboard</td>
 	 </tr><tr>
 		<td> dataurl</td><td>dataurl image.png</td><td>return base64 of given object</td>
