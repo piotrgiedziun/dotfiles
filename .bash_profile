@@ -39,6 +39,10 @@ fi
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
 
+if [ -f ~/.custom ]; then
+  source ~/.custom
+fi
+
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
