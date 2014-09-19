@@ -102,7 +102,7 @@ def virtualenv():
 	os.system("sudo easy_install pip")
 	os.system("pip install --upgrade distribute")
 	os.system("sudo pip install virtualenv")
-	os.system("pip install virtualenvwrapper")
+	os.system("sudo pip install virtualenvwrapper")
 
 	return True
 
