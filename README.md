@@ -141,7 +141,9 @@ Host example.com
 
 ##Prerequisites
 * **brew** - The missing package manager for OS X [[download]](http://mxcl.github.com/homebrew/)<br>
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"\
+```
 * **iTerm2** - 
 http://www.iterm2.com/downloads/beta/iTerm2-1_0_0_20130811.zip 
 
