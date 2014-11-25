@@ -110,6 +110,8 @@ def virtualenv():
 def dirs():
 	os.system("mkdir ~/Work 2> /dev/null")
 	os.system("mkdir ~/Projects 2> /dev/null")
+	os.system("sudo chown $(whoami) ~/Work")
+	os.system("sudo chown $(whoami) ~/Projects")
 
 	return True
 
