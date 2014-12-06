@@ -4,17 +4,18 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 
 ##Feature
 
-###Navigation
+###List of aliases/functions
 <table width="100%">
+  <tr><th colspan="3">Navigation</th></tr>
   <tr>
     <th>Alias</th><th>Method</th><th>Description</th>
-  </tr>
+    </tr>
   	<tr>
 		<td> cdf</td><td>(fuction)</td><td> cd to path indicated by Finder.app instance</td>
 	 </tr><tr>
 		<td> tab</td><td>(fuction)</td><td> create new iTerm tab with current dir and virtualenv</td>
 	 </tr><tr>
-		<td> cdf</td><td>(fuction)</td><td> splits tab with current dir and virtualenv. Options v - vertical, h-horizontal</td>
+		<td> splittab</td>(fuction)</td><td> splits tab with current dir and virtualenv. Options v - vertical, h - horizontal</td>
 	 </tr><tr>
 		<td> ..</td><td>cd ..</td><td> cd up</td>
 	 </tr><tr>
@@ -30,9 +31,8 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> cdw</td><td>cd ~/Work</td><td> </td>
 	 </tr>
-</table>
-###Opening files
-<table width="100%">
+<tr><th colspan="3">Opening files</th></tr>
+
   <tr>
    <th>Alias</th><th>Method</th><th>Description</th>
   </tr>
@@ -41,9 +41,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> o.</td><td>open .</td><td> </td>
 	 </tr>
-</table>
-###Listing
-<table width="100%">
+  <tr><th colspan="3">Listing</th></tr>
   <tr>
     <th>Alias</th><th>Method</th><th>Description</th>
   </tr>
@@ -54,9 +52,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> lsd</td><td>ls -l | grep "^d"</td><td> </td>
 	 </tr>
-</table>
-###Network
-<table width="100%">
+  <tr><th colspan="3">Network</th></tr>
   <tr>
    <th>Alias</th><th>Method</th><th>Description</th>
   </tr>
@@ -80,9 +76,8 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> GET|POST|PUT|DELETE [url]</td><td>lwp-request -m '[METHOD]'</td><td> send GET/POST/PUT/DELETE request</td>
 	 </tr>
-</table>
-###Others
-<table width="100%">
+<tr><th colspan="3">Others</th></tr>
+
   <tr>
     <th>Alias</th><th>Usage</th><th>Description</th>
   </tr>
