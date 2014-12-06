@@ -15,7 +15,7 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
 	 </tr><tr>
 		<td> tab</td><td>(fuction)</td><td> create new iTerm tab with current dir and virtualenv</td>
 	 </tr><tr>
-		<td> splittab</td>(fuction)</td><td> splits tab with current dir and virtualenv. Options v - vertical, h - horizontal</td>
+		<td> splittab</td><td>(fuction)</td><td> splits tab with current dir and virtualenv. Options v - vertical, h - horizontal</td>
 	 </tr><tr>
 		<td> ..</td><td>cd ..</td><td> cd up</td>
 	 </tr><tr>
