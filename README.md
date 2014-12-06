@@ -12,6 +12,10 @@ Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's d
   	<tr>
 		<td> cdf</td><td>(fuction)</td><td> cd to path indicated by Finder.app instance</td>
 	 </tr><tr>
+		<td> tab</td><td>(fuction)</td><td> create new iTerm tab with current dir and virtualenv</td>
+	 </tr><tr>
+		<td> cdf</td><td>(fuction)</td><td> splits tab with current dir and virtualenv. Options v - vertical, h-horizontal</td>
+	 </tr><tr>
 		<td> ..</td><td>cd ..</td><td> cd up</td>
 	 </tr><tr>
 		<td> ...</td><td>cd ../..</td><td> cd 2 x up</td>

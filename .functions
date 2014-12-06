@@ -3,6 +3,50 @@ function mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
+# duplicate current session in new tab
+function tab() {
+tab_pwd=$(pwd)
+tab_ve=$(echo $VIRTUAL_ENV | rev | cut -d/ -f1 | rev)
+
+osascript <<-EOF
+  tell application "iTerm"
+    tell the current terminal
+      tell (launch session "Default session")
+        write text "cd $tab_pwd"
+        write text "if [ '$tab_ve' ]; then workon $tab_ve; fi"
+        write text "clear"
+      end tell
+    end tell
+  end tell
+EOF
+}
+
+# duplicate current session in new splitted tab
+function splittab() {
+  # split direction (vertical, horizontal)
+  if [ $# -ge 1 ] && [ "$1" == "v" ]; then
+    tab_keys='shift down,command down'
+  else
+    tab_keys='command down'
+  fi
+
+  tab_pwd=$(pwd)
+  tab_ve=$(echo $VIRTUAL_ENV | rev | cut -d/ -f1 | rev)
+
+osascript <<-EOF
+  tell application "iTerm"
+    tell the current terminal
+      tell the current session
+        tell application "System Events" to keystroke "d" using {$tab_keys}
+          write text "cd $tab_pwd"
+          write text "if [ '$tab_ve' ]; then workon $tab_ve; fi"
+          write text "clear"
+      end tell
+    end tell
+  end tell
+EOF
+}
+
 # extract given file
 # source: https://github.com/ddjfreedom/dotfiles/
 function extract () {
