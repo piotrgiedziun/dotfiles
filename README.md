@@ -2,9 +2,8 @@
 This is a collection of dotfiles customised for my own usage.<br>
 Based on [Roderik's dotfiles](https://github.com/roderik/dotfiles) and [Matt's dotfiles](https://github.com/mattbanks/dotfiles)
 
-##Feature
+##List of aliases/functions
 
-###List of aliases/functions
 <table width="100%">
   <tr><th colspan="3">Navigation</th></tr>
   <tr>
