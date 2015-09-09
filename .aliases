@@ -37,6 +37,9 @@ alias ls="command ls ${colorflag}"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Reload current source
+alias reload="source /Users/$USER/.bash_profile"
+
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g; sudo gem update'
 
