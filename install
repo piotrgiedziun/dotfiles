@@ -57,6 +57,9 @@ def dotfiles():
 	files = [".extra",".bash_profile",".bash_prompt",".exports",".aliases",".functions",".bashrc",".vimrc"]
 	for copy_file in files:
 		os.system("cp %s ~/" % (copy_file, ))
+		
+	# custom flags/sucha as JAVA_PATH etc.
+	os.system("touch .custom")
 
 	# copy bin files
 	bin_files = ["server",]
